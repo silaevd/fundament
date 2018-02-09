@@ -36,11 +36,11 @@ const config = {
                 fallback: 'style-loader',
                 //resolve-url-loader may be chained before sass-loader if necessary
                 use: [{
-                        loader: 'css-loader',
-                        options: {
-                            minimize: !isDevelopment
-                        }
-                    },
+                    loader: 'css-loader',
+                    options: {
+                        minimize: !isDevelopment
+                    }
+                },
                     'sass-loader',
                     'resolve-url-loader'
                 ]
@@ -48,26 +48,26 @@ const config = {
         }, {
             test: /\.(gif|png|jpe?g|svg)$/i,
             use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: 'images/[name][hash].[ext]'
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                }
+            }, {
+                loader: 'image-webpack-loader',
+                options: {
+                    mozjpeg: {
+                        progressive: true,
+                        quality: 70
                     }
-                }, {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        mozjpeg: {
-                            progressive: true,
-                            quality: 70
-                        }
-                    }
-                },
+                }
+            },
             ],
         }, {
             test: /\.(eot|svg|ttf|woff|woff2)$/,
             use: {
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name][hash].[ext]'
+                    name: 'fonts/[name].[ext]'
                 }
             },
         }]
@@ -88,12 +88,12 @@ const config = {
 if (isDevelopment) {
     fs.readdirSync(assetsPath)
         .map((fileName) => {
-            if (['.css', '.js'].includes(path.extname(fileName))) {
-                return fs.unlinkSync(`${assetsPath}/${fileName}`);
-            }
+        if (['.css', '.js'].includes(path.extname(fileName))) {
+        return fs.unlinkSync(`${assetsPath}/${fileName}`);
+    }
 
-            return '';
-        });
+    return '';
+});
 } else {
     config.plugins.push(
         new webpack.optimize.UglifyJsPlugin({

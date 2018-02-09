@@ -5,10 +5,155 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webpack starter</title>
+    <title>Фундамент</title>
     <link rel="stylesheet" href="main.css">
-    <script src="bundle.js" defer></script>
 </head>
+
 <body>
+    <div class="wrapper">
+
+        <header id="header">
+            <div class="container">
+                <div class="flex">
+
+                    <div class="logo">
+                        <a class="logo__link" href="http://zemdev.ru/">
+                            <img class="logo__img" src="src/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="title">
+                        <h1 class="title__text">
+                            аренда спецтехники
+                        </h1>
+                    </div>
+
+                    <div class="phone">
+                        <a class="phone__number" href="tel:+79269591193">+7 (926) 959 11 93</a>
+                        <span class="phone__text">Телефон в Москве</span>
+                    </div>
+
+                    <div class="request">
+                        <button class="request__button">Оставить заявку</button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+
+            <section class="goods">
+                <div class="container">
+                    <div class="flex">
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item1.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">Ленточный мелкозаглубленный</span>
+                            <span class="goodsItem__price">Цена: от 3200 руб./мп</span>
+
+                        </div>
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item2.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">Ленточный заглубленный</span>
+                            <span class="goodsItem__price">Цена: от 9500 руб./мп</span>
+                        </div>
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item3.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">Монолитная армированная плита</span>
+                            <span class="goodsItem__price">Цена: от 3600 руб./мп</span>
+                        </div>
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item4.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">Свайно-ростверковый</span>
+                            <span class="goodsItem__price">Цена: от 3700 руб./мп</span>
+                        </div>
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item5.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">УШП плита</span>
+                            <span class="goodsItem__price">Цена: от 6000 руб./мп</span>
+                        </div>
+
+                        <div class="goodsItem">
+                            <img src="./src/images/goods/item6.jpg" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
+                            <span class="goodsItem__title">Цокольный монолитный этаж</span>
+                            <span class="goodsItem__price">Цена: от 16000 руб./мп</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="advantages__filter">
+                    <div class="sectionTitle">
+                        <h2><span class="sectionTitle__highlight">5 ключевых</span> выгод</h2>
+                        <img src="./src/images/sectionTitleImg.png" alt="" class="sectionTitle__img">
+                    </div>
+                    <div class="flex">
+                        <div class="advantagesItem">
+                            <div class="advantagesItem__circle circle__item1"></div>
+                            <h2 class="advantagesItem__title">100% соблюдение сроков</h2>
+                            <p class="advantagesItem__desc">
+                                Мы ценим ваше время, именно поэтому все работы выполняемые нашими специалистами сдаются строго в оговоренный срок.
+                            </p>
+                        </div>
+
+                        <div class="advantagesItem">
+                            <div class="advantagesItem__circle circle__item2"></div>
+                            <h2 class="advantagesItem__title">бесплатный выезд инженера</h2>
+                            <p class="advantagesItem__desc">
+                                Сомневаетесь какой фундамент выбрать? Какая будет его точная длинна и высота? Наш инженер приедет к вам совершенно бесплатно и поможет!
+                            </p>
+                        </div>
+                        <div class="advantagesItem">
+                            <div class="advantagesItem__circle circle__item3"></div>
+                            <h2 class="advantagesItem__title">работаем без предоплаты</h2>
+                            <p class="advantagesItem__desc">
+                                Мы бережем нервы наших заказчиков, именно по этому, мы никогда не берем предоплату за еще не выполненные и не сданные работы!
+                            </p>
+                        </div>
+                        <div class="advantagesItem">
+                            <div class="advantagesItem__circle circle__item4"></div>
+                            <h2 class="advantagesItem__title">образованные строители</h2>
+                            <p class="advantagesItem__desc">
+                                Все, без исключения, наши специалисты, имеют профильное образование и проходят курсы повышения квалификации.
+                            </p>
+                        </div>
+
+                        <div class="advantagesItem">
+                            <div class="advantagesItem__circle circle__item5"></div>
+                            <h2 class="advantagesItem__title">демократические цены всегда</h2>
+                            <p class="advantagesItem__desc">
+                                Мы прекрасно понимаем, что в стране сегодня не самая легкая финансовая ситуация, именно поэтому стараемся держать цену минимальной.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="brands">
+                <div class="brands__filter">
+
+                    <div class="sectionTitle">
+                        <h2><span class="sectionTitle__highlight">оборудование и материалы</span> мировых брендов</h2>
+                        <img src="./src/images/sectionTitleImg.png" alt="" class="sectionTitle__img">
+                    </div>
+
+                    <div class="flex">
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
+
+<script src="bundle.js" defer></script>
+
 </html>

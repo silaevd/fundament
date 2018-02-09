@@ -1,0 +1,68 @@
+header {
+  padding: 20px 0;
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  max-width: 270px;
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  &__text {
+    font-family: "OpenSansBold";
+    font-size: 1.625em;
+    text-transform: uppercase;
+  }
+}
+
+.phone {
+  line-height: 1.3;
+
+  &__number {
+    font-family: "OpenSansExtraBold";
+    color: $black;
+    font-size: 1.3em;
+    display: block;
+    text-decoration: none;
+    transition: $hover-transition;
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__text {
+    font-family: "OpenSansRegular";
+    color: $gray;
+    font-size: 0.85em;
+  }
+}
+
+.request {
+  &__button {
+    font-family: "OpenSansSemiBold";
+    font-size: 1.063em;
+    border: 2px solid $orange;
+    border-radius: 4px;
+    transition: $hover-transition;
+    &:hover {
+      color: $white;
+      background-color: $orange;
+      cursor: pointer;
+    }
+  }
+}
+
