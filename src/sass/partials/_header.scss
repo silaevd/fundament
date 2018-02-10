@@ -1,15 +1,15 @@
 header {
-  padding: 20px 0;
+  padding: 20px 15px;
   .flex {
-    display: flex;
-    flex-wrap: wrap;
+    @include row-flex();
     justify-content: space-between;
     align-items: center;
   }
 }
 
 .logo {
-  max-width: 270px;
+  @include col();
+
   &__link {
     display: block;
     width: 100%;
@@ -17,11 +17,14 @@ header {
   }
   &__img {
     width: 100%;
+    max-width: 270px;
     height: auto;
   }
 }
 
 .title {
+  @include col();
+
   &__text {
     font-family: "OpenSansBold";
     font-size: 1.625em;
@@ -31,6 +34,7 @@ header {
 
 .phone {
   line-height: 1.3;
+  @include col();
 
   &__number {
     font-family: "OpenSansExtraBold";
@@ -52,6 +56,8 @@ header {
 }
 
 .request {
+  @include col();
+
   &__button {
     font-family: "OpenSansSemiBold";
     font-size: 1.063em;
@@ -66,3 +72,43 @@ header {
   }
 }
 
+@include max-screen(1070px) {
+
+  header {
+    .flex {
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    @include col-6();
+    text-align: center;
+  }
+
+  .title {
+    @include col-6();
+    text-align: center;
+  }
+}
+
+@include max-screen(455px) {
+
+  .logo {
+    @include col-12();
+  }
+
+  .title {
+    @include col-12();
+    margin-bottom: 15px;
+  }
+
+  .phone {
+    @include col-12();
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .request {
+    @include col-12();
+    text-align: center;
+  }
+}

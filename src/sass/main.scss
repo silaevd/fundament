@@ -9,7 +9,10 @@
 @import "./partials/header";
 @import "./partials/goods";
 @import "./partials/advantages";
+@import "./partials/stages";
 @import "./partials/brands";
+@import "./partials/contacts";
+@import "./partials/footer";
 
 * {
   box-sizing: border-box;
@@ -27,7 +30,6 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
   max-width: 1280px;
 }
 

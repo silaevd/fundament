@@ -45,12 +45,13 @@ const config = {
                     'resolve-url-loader'
                 ]
             })
-        }, {
+        },
+            {
             test: /\.(gif|png|jpe?g|svg)$/i,
             use: [{
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name].[ext]'
+                    name: '[path][name].[ext]'
                 }
             }, {
                 loader: 'image-webpack-loader',
@@ -62,15 +63,17 @@ const config = {
                 }
             },
             ],
-        }, {
+        },
+            {
             test: /\.(eot|svg|ttf|woff|woff2)$/,
             use: {
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name].[ext]'
+                    name: '[path][name].[ext]'
                 }
             },
-        }]
+        }
+        ]
     },
     plugins: [
         new webpack.ProvidePlugin({

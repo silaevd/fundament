@@ -1,0 +1,92 @@
+.stages {
+  background-image: url('../../public/src/images/stages/stages.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  &__filter {
+    background-color: rgba(0, 141, 210, 0);
+    padding: 0 15px 40px;
+  }
+  .sectionTitle {
+    color: $black;
+
+    &__highlight {
+      color: $blue;
+    }
+  }
+  .flex {
+    @include row-flex();
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+}
+
+.stagesItem {
+  color: $black;
+  text-align: center;
+  max-width: 221px;
+
+  &__circle {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    background-position: center center;
+    transition: $hover-transition;
+    &:hover {
+      background-image: url('../../public/src/images/stages/item1_hover.png');
+    }
+  }
+
+  &__title {
+    font-family: "HelveticaNeueCyrLight";
+    font-size: 1.25em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  &__desc {
+    font-family: "HelveticaNeueCyrLight";
+    font-size: 0.85em;
+    line-height: 1.2;
+  }
+}
+
+.stagesItem {
+
+  &__circle.circle__item1 {
+    background-image: url('../../public/src/images/stages/item1.png');
+    &:hover {
+      background-image: url('../../public/src/images/stages/item1_hover.png');
+    }
+  }
+
+  &__circle.circle__item2 {
+    background-image: url('../../public/src/images/stages/item2.png');
+    &:hover {
+      background-image: url('../../public/src/images/stages/item2_hover.png');
+    }
+  }
+
+  &__circle.circle__item3 {
+    background-image: url('../../public/src/images/stages/item3.png');
+    &:hover {
+      background-image: url('../../public/src/images/stages/item3_hover.png');
+    }
+  }
+
+  &__circle.circle__item4 {
+    background-image: url('../../public/src/images/stages/item4.png');
+    &:hover {
+      background-image: url('../../public/src/images/stages/item4_hover.png');
+    }
+  }
+
+  &__circle.circle__item5 {
+    background-image: url('../../public/src/images/stages/item5.png');
+    &:hover {
+      background-image: url('../../public/src/images/stages/item5_hover.png');
+    }
+  }
+}
+
