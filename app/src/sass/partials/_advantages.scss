@@ -1,0 +1,140 @@
+.advantages {
+  background-image: url('../images/advantages/advantages.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  &__filter {
+    background-color: rgba(0, 141, 210, 0.9);
+    padding: 0 15px 40px;
+  }
+  .sectionTitle {
+    color: $white;
+
+    &__highlight {
+      color: $orange;
+    }
+  }
+  .flex {
+    @include row-flex();
+    justify-content: space-between;
+    padding: 0 80px;
+  }
+}
+
+.advantagesItemWrap {
+  @include col();
+}
+
+.advantagesItem {
+  color: $white;
+  text-align: center;
+  width: 221px;
+  margin: 0 auto;
+
+  &__circle {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    background-position: center center;
+    transition: $hover-transition;
+  }
+
+  &__title {
+    font-family: "HelveticaNeueCyrLight";
+    font-size: 1.25em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  &__desc {
+    font-family: "HelveticaNeueCyrLight";
+    font-size: 0.85em;
+    line-height: 1.2;
+  }
+}
+
+.advantagesItem {
+
+  &__circle.circle__item1 {
+    background-image: url('../images/advantages/item1.png');
+    &:hover {
+      background-image: url('../images/advantages/item1_hover.png');
+    }
+  }
+
+  &__circle.circle__item2 {
+    background-image: url('../images/advantages/item2.png');
+    &:hover {
+      background-image: url('../images/advantages/item2_hover.png');
+    }
+  }
+
+  &__circle.circle__item3 {
+    background-image: url('../images/advantages/item3.png');
+    &:hover {
+      background-image: url('../images/advantages/item3_hover.png');
+    }
+  }
+
+  &__circle.circle__item4 {
+    background-image: url('../images/advantages/item4.png');
+    &:hover {
+      background-image: url('../images/advantages/item4_hover.png');
+    }
+  }
+
+  &__circle.circle__item5 {
+    background-image: url('../images/advantages/item5.png');
+    &:hover {
+      background-image: url('../images/advantages/item5_hover.png');
+    }
+  }
+}
+
+@include max-screen(1414px) {
+
+  .advantages {
+    .flex {
+      justify-content: center;
+    }
+  }
+
+  .advantagesItemWrap {
+    @include col-4();
+    min-width: 221px;
+  }
+
+  .advantagesItem {
+    margin-bottom: 15px;
+  }
+}
+
+@include max-screen(912px) {
+
+  .advantages {
+    .flex {
+      justify-content: center;
+    }
+  }
+
+  .advantagesItemWrap {
+    @include col-6();
+  }
+}
+
+@include max-screen(661px) {
+  .advantages {
+    .flex {
+      padding: 0 40px;
+    }
+  }
+}
+
+@include max-screen(581px) {
+  .advantages {
+    .flex {
+      padding: 0 20px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.contacts {
+  background-image: url('../images/contacts/contacts.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  &__filter {
+    background-color: rgba(115,99,87,0.65);
+    padding: 0 15px 40px;
+  }
+
+  .sectionTitle {
+    color: $white;
+    padding-top: 115px;
+
+    &__highlight {
+      color: $orange;
+    }
+  }
+
+  &__address {
+    font-family: "HelveticaNeueCyrLight";
+    color: $white;
+    font-size: 1.563em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__phone {
+    font-family: "HelveticaNeueCyrLight";
+    color: $white;
+    font-size: 1.563em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__mail {
+    font-family: "HelveticaNeueCyrLight";
+    color: $white;
+    font-size: 1.563em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+@include max-screen(480px) {
+  .contacts {
+    .sectionTitle {
+      padding-top: 60px;
+    }
+  }
+}

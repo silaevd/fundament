@@ -1,0 +1,22 @@
+footer {
+  color: $muted;
+  background-color: $footer;
+  padding: 25px 15px;
+
+  .flex {
+    @include row-flex();
+  }
+}
+
+.footer__text {
+  @include col();
+  p {
+    font-family: "HelveticaNeueCyrLight";
+    font-size: 0.875em;
+    line-height: 1.1;
+    a {
+      color: $muted;
+    }
+  }
+}
+

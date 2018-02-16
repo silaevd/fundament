@@ -1,0 +1,44 @@
+.brands {
+  background-image: url('../images/brands/brands.jpg');
+  background-position: center center;
+  background-size: cover;
+
+  &__filter {
+    background-color: rgba(0,141,210,0.6);
+    padding: 0 15px 40px;
+  }
+
+  .sectionTitle {
+    color: $white;
+
+    &__highlight {
+      color: $orange;
+    }
+  }
+
+  .flex {
+    @include row-flex();
+    justify-content: center;
+    padding: 0 80px;
+  }
+
+  &__text {
+    font-family: "HelveticaNeueCyrLight";
+    line-height: 1.2;
+    color: $white;
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+
+.brandsItem {
+  @include col();
+}
+
+@include max-screen(659px) {
+  .brands {
+    .flex {
+      padding: 0 40px;
+    }
+  }
+}
