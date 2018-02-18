@@ -34,6 +34,7 @@ gulp.task('scripts', function() {
     'node_modules/jquery/dist/jquery.min.js', // Берем jQuery
     // 'app/libs/smoothscroll-for-websites/SmoothScroll.js',
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js',
   ])
   .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
   .pipe(uglify()) // Сжимаем JS файл
@@ -55,13 +56,16 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
   var buildCss = gulp.src([ // Переносим библиотеки в продакшен
   'app/src/css/main.css',
   ])
-  .pipe(gulp.dest('dist/src/css'))
+  .pipe(gulp.dest('dist/src/css'));
 
   var buildFonts = gulp.src('app/src/fonts/**/*') // Переносим шрифты в продакшен
-  .pipe(gulp.dest('dist/src/fonts'))
+  .pipe(gulp.dest('dist/src/fonts'));
 
   var buildJs = gulp.src('app/src/js/**/*') // Переносим скрипты в продакшен
-  .pipe(gulp.dest('dist/src/js'))
+  .pipe(gulp.dest('dist/src/js'));
+
+  var buildJs = gulp.src('app/src/images/**/*') // Переносим скрипты в продакшен
+  .pipe(gulp.dest('dist/src/images'));
 
   var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
   .pipe(gulp.dest('dist'));

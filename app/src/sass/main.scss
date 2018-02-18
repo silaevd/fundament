@@ -47,6 +47,19 @@ body {
   padding: 30px 0 15px;
 }
 
+.button {
+  font-family: "OpenSansSemiBold";
+  font-size: 1.063em;
+  border: 2px solid $orange;
+  border-radius: 4px;
+  transition: $hover-transition;
+  &:hover {
+    color: $white;
+    background-color: $orange;
+    cursor: pointer;
+  }
+}
+
 .hidden {
   display: none;
 }

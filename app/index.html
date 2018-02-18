@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="request">
-                        <button class="request__button" data-name="request">Оставить заявку</button>
+                        <button id="callToMe" class="button" data-name="request">Оставить заявку</button>
                     </div>
 
                 </div>
@@ -68,7 +68,7 @@
                 <div class="container">
                     <div class="flex">
 
-                        <div class="goodsItem" data-name="item1">
+                        <div href="#goodsPopUp"class="goodsItem" data-name="item1">
                             <img src="./src/images/goods/item1.png" alt="Ленточный мелкозаглубленный" class="goodsItem__img">
                             <span class="goodsItem__title">Ленточный мелкозаглубленный</span>
                             <span class="goodsItem__price">Цена: от <span class="highlight">3200</span> руб./мп</span>
@@ -325,7 +325,7 @@
                     <div class="footer__text">
                         <p>
                             2017 Вся информация на сайте защищена законодательством РФ. Копирование запрещено!<br>
-                            Тел.: +7 (495) 508-6287 | E-mal: arenda@zemdev.ru<br>
+                            Тел.: +7 (926) 959-1193 | E-mail: 9591193@gmail.com<br>
                             Адрес: Россия, г. Москва, Волгоградский пр-т, д. 47<br>
                             <a href="#">Политика конфиденциальности</a>
                         </p>
@@ -335,56 +335,76 @@
         </footer>
     </div>
 
-    <div class="requestPopUp mfp-hide">
+    <div class="popUp hidden">
 
-        <form action="" class="requestForm">
-            <h2 class="requestForm__title">Оставить заявку</h2>
+        <div id="requestPopUp" class="requestPopUp">
 
-            <label for="name" class="requestForm__label">Ваше имя*</label>
-            <input type="text" id="name" name="name" class="requestForm__input">
+            <form id="callMe" class="requestForm">
 
-            <label for="phone" class="requestForm__label">Телефон*</label>
-            <input type="text" id="phone" name="phone" class="requestForm__input">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="admin_email" value="9591193@gmail.com">
+                <input type="hidden" name="site" value="fundament.zemdevelopment.ru">
+                <input type="hidden" name="form_subject" value="Сообщение с сайта fundament.zemdevelopment.ru">
+                <!-- END Hidden Required Fields -->
 
-            <button class="request__button">Оставить заявку</button>
-        </form>
+                <h2 class="requestForm__title">Оставить заявку</h2>
 
-        <div class="popUp__close">
-            <i class="far fa-times-circle"></i>
+                <label class="requestForm__label">Ваше имя*</label>
+                <input type="text" name="name" class="requestForm__input" required>
+
+                <label class="requestForm__label">Телефон*</label>
+                <input type="text"  name="phone" class="requestForm__input" required>
+
+                <button type="submit" class="button">Оставить заявку</button>
+            </form>
+
+            <div class="popUp__close">
+                <i class="far fa-times-circle"></i>
+            </div>
+
+        </div>
+
+        <div id="goodsPopUp" class="goodsPopUp">
+            <div class="flex">
+
+                <div class="goodsPopUp__cover">
+                    <img src="" alt="" class="goodsPopUp__img">
+                </div>
+
+                <div class="goodsPopUp__info">
+                    <h2 class="goodsPopUp__title"></h2>
+                    <p class="goodsPopUp__desc"></p>
+                    <p class="goodsPopUp__price">от <span class="highlight"></span> руб./мп</p>
+
+                    <form id="callMeFromGoods" class="requestForrm">
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="admin_email" value="9591193@gmail.com">
+                        <input type="hidden" name="site" value="fundament.zemdevelopment.ru">
+                        <input type="hidden" name="project_name" value="">
+                        <input type="hidden" name="form_subject" value="Сообщение с сайта fundament.zemdevelopment.ru">
+                        <!-- END Hidden Required Fields -->
+
+                        <h2 class="requestForm__title">Оставить заявку</h2>
+
+                        <label class="requestForm__label">Ваше имя*</label>
+                        <input type="text" name="name" class="requestForm__input" required>
+
+                        <label class="requestForm__label">Телефон*</label>
+                        <input type="text" name="phone" class="requestForm__input" required>
+
+                        <button type="submit" class="button">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="popUp__close">
+                <i class="far fa-times-circle"></i>
+            </div>
         </div>
 
     </div>
 
-    <div class="goodsPopUp mfp-hide">
-        <div class="flex">
-
-            <div class="goodsPopUp__cover">
-                <img src="" alt="" class="goodsPopUp__img">
-            </div>
-
-            <div class="goodsPopUp__info">
-                <h2 class="goodsPopUp__title"></h2>
-                <p class="goodsPopUp__desc"></p>
-                <p class="goodsPopUp__price">от <span class="highlight"></span> руб./мп</p>
-
-                <form action="" class="requestForm">
-                    <h2 class="requestForm__title">Оставить заявку</h2>
-
-                    <label for="name" class="requestForm__label">Ваше имя*</label>
-                    <input type="text" name="name" class="requestForm__input">
-
-                    <label for="phone" class="requestForm__label">Телефон*</label>
-                    <input type="text" name="phone" class="requestForm__input">
-
-                    <button class="request__button">Оставить заявку</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="popUp__close">
-            <i class="far fa-times-circle"></i>
-        </div>
-    </div>
 </body>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
