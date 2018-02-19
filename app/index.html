@@ -25,16 +25,41 @@
     <meta property="og:description" content="Строительство фундаментов с официальным договором и гарантией до 15 лет в Москве и подмосковье" />
     <meta property="og:url" content="http://fundament.zemdevelopment.ru" />
     <meta property="og:image" content="http://fundament.zemdevelopment.ru/src/images/ogp_logo.png" />
-    <meta property="og:image:width" content="968">
-    <meta property="og:image:height" content="504">
+    <!--<meta property="og:image:width" content="968">-->
+    <!--<meta property="og:image:height" content="504">-->
+
+    <!-- Preloader -->
+    <script>
+        window.addEventListener('DOMContentLoaded', preloaderShow, false);
+        window.addEventListener('load', preloaderHide);
+
+        function preloaderShow() {
+            document.querySelector('html').style.height="100%";
+            document.body.style.height="100%";
+            var preloader = document.createElement('div');
+            preloader.classList.add('preloader');
+            preloader.style.height="100%";
+            preloader.style.width="100%";
+            preloader.style.top=0;
+            preloader.style.left=0;
+            preloader.style.backgroundColor="#ffffff";
+            preloader.style.backgroundImage = "url('./src/images/preloader.gif')";
+            preloader.style.backgroundPosition = "center center";
+            preloader.style.backgroundRepeat = "no-repeat";
+            preloader.style.position="fixed";
+            preloader.style.zIndex=1000;
+            document.body.insertBefore(preloader, document.querySelector('.wrapper'));
+        }
+
+        function preloaderHide() {
+            document.body.removeChild(document.querySelector('.preloader'));
+        }
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 
 <body>
-
-    <div id="preloader">
-        <div id="preloader__animation"></div>
-    </div>
 
     <div class="wrapper">
 
@@ -421,7 +446,6 @@
 
 </body>
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="./src/js/libs.min.js" defer></script>
 <script src="./src/js/index.js" defer></script>
 

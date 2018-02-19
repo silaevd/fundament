@@ -1,11 +1,3 @@
-/* ---------------------------------------------- /*
-    * Preloader
-/* ---------------------------------------------- */
-$(window).on('load', function () {
-    $('#preloader__animation').fadeOut();
-    $('#preloader').delay(300).fadeOut('slow');
-});
-
 $(document).ready(function () {
 
 

@@ -28,22 +28,6 @@ body {
   color: $black;
 }
 
-#preloader {
-  background: white;
-  position: fixed;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: 9999;
-  display: flex;
-  &__animation {
-    background-image: url('../images/preloader.gif');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 300px;
-    margin: auto;
-  }
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: calc(1920px - 40px);
