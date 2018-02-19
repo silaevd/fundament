@@ -64,30 +64,29 @@ $('.popUp__close').on('click', function (e) {
 /* ---------------------------------------------- */
 
 $('form').on('submit', function () {
-    console.log('уииииииии');
 
     const form = $(this);
     const submitBtn = form.find('button[type="submit"]');
 
-
-    // submitBtn.attr('disabled', 'disabled').addClass('disabled');
     $.ajax({
         type: "POST",
         url: "mail.php",
         data: form.serialize()
     }).done(function() {
-        // $(submitBtn).notify("Ваше сообщение успешно отправленно!", {
-        //     className: 'success',
-        //     clickToHide: true,
-        //     arrowShow: true,
-        //     position: 'right middle',
-        // });
-        $.magnificPopup.close();
+        $.magnificPopup.open({
+            items: {
+                src: $('#thankyouPopUp'),
+                type: 'inline',
+            },
+            preloader: false,
+            showCloseBtn: false,
+
+        });
         setTimeout(function() {
             // Done Functions
             form.trigger("reset");
-            submitBtn.removeAttr('disabled').removeClass('disabled');
-        }, 1000);
+            $.magnificPopup.close();
+        }, 4000);
     });
     return false;
 });

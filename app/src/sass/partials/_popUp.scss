@@ -87,6 +87,40 @@
   }
 }
 
+.thankyouPopUp {
+  text-align: center;
+  background: $orange;
+  padding: 50px;
+  box-shadow: 0 5px 15px 5px rgba(127, 127, 127, 0.3);
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: $white;
+  }
+
+  &__thanks {
+    font-family: "OpenSansSemiBold";
+    font-size: 2em;
+    margin: 20px 0;
+  }
+
+  &__manager {
+    font-family: "OpenSansRegular";
+    margin-bottom: 20px;
+  }
+
+  hr {
+    width: 75px;
+    height: 2px;
+    border: none;
+    background: $black;
+  }
+}
+
 @include max-screen(768px) {
   .goodsPopUp {
     margin: 20px;
@@ -134,6 +168,7 @@
   .requestPopUp {
     margin: 20px;
   }
+
   .goodsPopUp {
     max-width: 440px;
 
@@ -148,6 +183,10 @@
     &__img {
       width: 100%;
     }
+  }
+
+  .thankyouPopUp {
+    margin: 20px;
   }
 }
 
