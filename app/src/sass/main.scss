@@ -5,7 +5,11 @@
 @import "smart-grid";
 
 //Libs
-@import "libs/magnific-popup";
+@import "libs/magnific-popup/magnific-popup";
+
+$fa-font-path:   "../fonts/fontawesome";
+@import "libs/fontawesome-5.0.6/fontawesome";
+@import "libs/fontawesome-5.0.6/fa-regular.scss";
 
 //Partials
 @import "./partials/header";
