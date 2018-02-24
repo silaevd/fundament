@@ -34,7 +34,6 @@
 
   .flex {
     @include row-flex();
-    //align-items: center;
   }
 
   &__cover {
@@ -57,20 +56,21 @@
   }
 
   &__title {
-    font-family: "OpenSansBold";
+    font-family: "OpenSansBold", sans-serif;
     font-size: 1.250em;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
 
   &__desc {
-    font-family: "OpenSansRegular";
+    font-family: "OpenSansRegular", sans-serif;
     text-align: justify;
     margin-bottom: 15px;
+    line-height: 1.3em;
   }
 
   &__price {
-    font-family: "OpenSansBold";
+    font-family: "OpenSansBold", sans-serif;
     font-size: 1.250em;
     margin-bottom: 40px;
 
@@ -103,13 +103,13 @@
   }
 
   &__thanks {
-    font-family: "OpenSansSemiBold";
+    font-family: "OpenSansSemiBold", sans-serif;
     font-size: 2em;
     margin: 20px 0;
   }
 
   &__manager {
-    font-family: "OpenSansRegular";
+    font-family: "OpenSansRegular", sans-serif;
     margin-bottom: 20px;
   }
 

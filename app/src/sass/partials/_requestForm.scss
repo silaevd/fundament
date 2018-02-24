@@ -1,14 +1,14 @@
 .requestForm {
 
   &__title {
-    font-family: "OpenSansBold";
+    font-family: "OpenSansBold", sans-serif;
     font-size: 1.250em;
     text-transform: uppercase;
     margin-bottom: 40px;
   }
 
   &__label {
-    font-family: "OpenSansSemiBold";
+    font-family: "OpenSansSemiBold", sans-serif;
     color: $gray;
     font-size: 0.85em;
     display: block;
@@ -31,5 +31,3 @@
     }
   }
 }
-
-@include max-screen(7)

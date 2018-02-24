@@ -1,5 +1,5 @@
 .brands {
-  background-image: url('../images/brands/brands.jpg');
+  background-image: url('../images/brands.jpg');
   background-position: center center;
   background-size: cover;
 
@@ -23,7 +23,7 @@
   }
 
   &__text {
-    font-family: "HelveticaNeueCyrLight";
+    font-family: "HelveticaNeueCyrLight", sans-serif;
     line-height: 1.2;
     color: $white;
     text-align: center;
@@ -33,6 +33,15 @@
 
 .brandsItem {
   @include col();
+  background-image: url("../images/sprite_brands.png");
+  width: 220px;
+  height: 90px;
+}
+
+@for $i from 0 through 9 {
+  .brandsItem[data-name="sprite-item#{$i}"] {
+    background-position: #{$i * -220}px 0;
+  }
 }
 
 @include max-screen(659px) {

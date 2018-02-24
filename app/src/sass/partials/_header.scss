@@ -14,6 +14,7 @@ header {
     display: block;
     width: 100%;
     height: 100%;
+    outline: none;
   }
   &__img {
     width: 100%;
@@ -24,11 +25,13 @@ header {
 
 .title {
   @include col();
+  max-width: 450px;
 
   &__text {
-    font-family: "OpenSansBold";
+    font-family: "OpenSansBold", sans-serif;
     font-size: 1.625em;
     text-transform: uppercase;
+    line-height: 1.15em;
   }
 }
 
@@ -37,7 +40,7 @@ header {
   @include col();
 
   &__number {
-    font-family: "OpenSansExtraBold";
+    font-family: "OpenSansExtraBold", sans-serif;
     color: $black;
     font-size: 1.3em;
     display: block;
@@ -49,7 +52,7 @@ header {
   }
 
   &__text {
-    font-family: "OpenSansRegular";
+    font-family: "OpenSansRegular", sans-serif;
     color: $gray;
     font-size: 0.85em;
   }

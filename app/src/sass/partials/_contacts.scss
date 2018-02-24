@@ -1,5 +1,5 @@
 .contacts {
-  background-image: url('../images/contacts/contacts.jpg');
+  background-image: url('../images/contacts.jpg');
   background-position: center center;
   background-size: cover;
 
@@ -10,7 +10,7 @@
 
   .sectionTitle {
     color: $white;
-    padding-top: 115px;
+    padding-top: 70px;
 
     &__highlight {
       color: $orange;
@@ -18,7 +18,7 @@
   }
 
   &__address {
-    font-family: "HelveticaNeueCyrLight";
+    font-family: "HelveticaNeueCyrLight", sans-serif;
     color: $white;
     font-size: 1.563em;
     text-align: center;
@@ -26,7 +26,7 @@
   }
 
   &__phone {
-    font-family: "HelveticaNeueCyrLight";
+    font-family: "HelveticaNeueCyrLight", sans-serif;
     color: $white;
     font-size: 1.563em;
     text-align: center;
@@ -36,7 +36,7 @@
   }
 
   &__mail {
-    font-family: "HelveticaNeueCyrLight";
+    font-family: "HelveticaNeueCyrLight", sans-serif;
     color: $white;
     font-size: 1.563em;
     text-align: center;

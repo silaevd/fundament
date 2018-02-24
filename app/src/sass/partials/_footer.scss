@@ -11,7 +11,7 @@ footer {
 .footer__text {
   @include col();
   p {
-    font-family: "HelveticaNeueCyrLight";
+    font-family: "HelveticaNeueCyrLight", sans-serif;
     font-size: 0.875em;
     line-height: 1.1;
     a {
